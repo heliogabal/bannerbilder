@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bannerbilder feature.
+ */
+
+include_once 'bannerbilder.features.inc';
