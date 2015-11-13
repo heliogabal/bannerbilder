@@ -193,23 +193,14 @@ function bannerbilder_image_default_styles() {
   $styles['bannerbildbreakpoints_theme_enlivenment_wide_1x'] = array(
     'label' => 'bannerbildbreakpoints_theme_enlivenment_wide_1x',
     'effects' => array(
-      17 => array(
-        'name' => 'manualcrop_crop',
+      3 => array(
+        'name' => 'image_scale',
         'data' => array(
-          'width' => 560,
-          'height' => 132,
-          'keepproportions' => 1,
-          'style_name' => 'bannerbildbreakpoints_theme_enlivenment_wide_1x',
+          'width' => 1000,
+          'height' => '',
+          'upscale' => 0,
         ),
-        'weight' => -10,
-      ),
-      24 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 1400,
-          'height' => 330,
-        ),
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
   );

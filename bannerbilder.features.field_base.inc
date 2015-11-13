@@ -10,7 +10,7 @@
 function bannerbilder_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_banner'
+  // Exported field_base: 'field_banner'.
   $field_bases['field_banner'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function bannerbilder_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_bannerbild'
+  // Exported field_base: 'field_bannerbild'.
   $field_bases['field_bannerbild'] = array(
     'active' => 1,
     'cardinality' => 1,

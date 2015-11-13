@@ -10,7 +10,7 @@
 function bannerbilder_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-bannerbild-field_banner'
+  // Exported field_instance: 'node-bannerbild-field_banner'.
   $field_instances['node-bannerbild-field_banner'] = array(
     'bundle' => 'bannerbild',
     'deleted' => 0,
@@ -21,7 +21,7 @@ function bannerbilder_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'bannerbildbreakpoints_theme_enlivenment_wide_1x',
+          'image_style' => '',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -39,6 +39,28 @@ function bannerbilder_field_default_field_instances() {
           ),
           'fallback_image_style' => '',
           'image_link' => '',
+          'lazyload' => '',
+          'lazyload_aspect_ratio' => '',
+          'picture_mapping' => 'bannerbilder',
+        ),
+        'type' => 'picture',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'picture',
+        'settings' => array(
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => 'bannerbilder',
+          ),
+          'fallback_image_style' => '',
+          'image_link' => '',
+          'lazyload' => 1,
+          'lazyload_aspect_ratio' => 1,
           'picture_mapping' => 'bannerbilder',
         ),
         'type' => 'picture',

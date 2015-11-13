@@ -15,12 +15,7 @@ function bannerbilder_default_breakpoint_group() {
   $breakpoint_group->api_version = 1;
   $breakpoint_group->machine_name = 'enlivenment';
   $breakpoint_group->name = 'Enlivenment';
-  $breakpoint_group->breakpoints = array(
-    0 => 'breakpoints.theme.enlivenment.wide',
-    1 => 'breakpoints.theme.enlivenment.standard',
-    2 => 'breakpoints.theme.enlivenment.narrow',
-    3 => 'breakpoints.theme.enlivenment.mobile',
-  );
+  $breakpoint_group->breakpoints = array();
   $breakpoint_group->type = 'theme';
   $breakpoint_group->overridden = 0;
   $export['enlivenment'] = $breakpoint_group;
