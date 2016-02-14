@@ -43,19 +43,9 @@ function bannerbilder_image_default_styles() {
     'label' => 'Banner',
     'effects' => array(
       5 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 1400,
-          'height' => 330,
-          'keepproportions' => 1,
-          'style_name' => 'banner',
-        ),
-        'weight' => -11,
-      ),
-      6 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 1400,
+          'width' => 1000,
           'height' => '',
           'upscale' => 0,
         ),
@@ -193,14 +183,14 @@ function bannerbilder_image_default_styles() {
   $styles['bannerbildbreakpoints_theme_enlivenment_wide_1x'] = array(
     'label' => 'bannerbildbreakpoints_theme_enlivenment_wide_1x',
     'effects' => array(
-      3 => array(
-        'name' => 'image_scale',
+      7 => array(
+        'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 1000,
-          'height' => '',
+          'height' => 242,
           'upscale' => 0,
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );
@@ -216,10 +206,10 @@ function bannerbilder_node_info() {
     'bannerbild' => array(
       'name' => t('Bannerbild'),
       'base' => 'node_content',
-      'description' => t('Die Bannerbilder können einzelnen Seiten zugeordnet werden und werden auf der Startseite als Slideshow gezeigt.'),
+      'description' => t('Die Bannerbilder können einzelnen Seiten zugeordnet werden und werden dann zwischen Header und Inhalt angezeigt. Es ist sinnvoll, die Bannerbilder nach der Seite zu benennen, auf der sie erscheinen sollen, damit die Zuordnung klar ersichtlich wird.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => t('Die Bilder sollten größer als 1400x330 Pixel groß sein, damit sie auf die richtige Größe skaliert werdne können.'),
+      'title_label' => t('Titel'),
+      'help' => t('Die Bilder sollten größer als 1000x242 Pixel groß sein, damit sie auf die richtige Größe skaliert werden können. Es werden automatisch mehrere Größen angelegt, die dann je nach Bildschirmgröße angezeigt werden.'),
     ),
   );
   drupal_alter('node_info', $items);

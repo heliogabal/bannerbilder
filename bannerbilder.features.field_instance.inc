@@ -82,6 +82,7 @@ function bannerbilder_field_default_field_instances() {
         'file_name' => array(
           'options' => array(
             'pathauto' => 0,
+            'slashes' => 0,
             'transliterate' => 0,
           ),
           'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
@@ -89,17 +90,19 @@ function bannerbilder_field_default_field_instances() {
         'file_path' => array(
           'options' => array(
             'pathauto' => 1,
+            'slashes' => 0,
             'transliterate' => 1,
           ),
           'value' => 'bannerbilder',
         ),
+        'redirect' => 0,
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
       'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1400x330',
+      'min_resolution' => '1000x242',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -110,8 +113,6 @@ function bannerbilder_field_default_field_instances() {
         'allowed_schemes' => array(
           'private' => 0,
           'public' => 'public',
-          'vimeo' => 0,
-          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -122,39 +123,138 @@ function bannerbilder_field_default_field_instances() {
         'browser_plugins' => array(
           'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 0,
-          'media_internet' => 'media_internet',
           'upload' => 'upload',
-          'youtube' => 0,
         ),
-        'manualcrop_crop_info' => 1,
-        'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 1,
-        'manualcrop_inline_crop' => FALSE,
-        'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => FALSE,
-        'manualcrop_require_cropping' => array(
-          'bannerbildbreakpoints_theme_enlivenment_mobile_1_5x' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1_5x',
-          'bannerbildbreakpoints_theme_enlivenment_mobile_1x' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1x',
-          'bannerbildbreakpoints_theme_enlivenment_mobile_2x' => 'bannerbildbreakpoints_theme_enlivenment_mobile_2x',
-          'bannerbildbreakpoints_theme_enlivenment_narrow_1x' => 'bannerbildbreakpoints_theme_enlivenment_narrow_1x',
-          'bannerbildbreakpoints_theme_enlivenment_standard_1x' => 'bannerbildbreakpoints_theme_enlivenment_standard_1x',
-          'bannerbildbreakpoints_theme_enlivenment_wide_1x' => 'bannerbildbreakpoints_theme_enlivenment_wide_1x',
-        ),
-        'manualcrop_styles_list' => array(
-          'bannerbildbreakpoints_theme_enlivenment_mobile_1_5x' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1_5x',
-          'bannerbildbreakpoints_theme_enlivenment_mobile_1x' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1x',
-          'bannerbildbreakpoints_theme_enlivenment_mobile_2x' => 'bannerbildbreakpoints_theme_enlivenment_mobile_2x',
-          'bannerbildbreakpoints_theme_enlivenment_narrow_1x' => 'bannerbildbreakpoints_theme_enlivenment_narrow_1x',
-          'bannerbildbreakpoints_theme_enlivenment_standard_1x' => 'bannerbildbreakpoints_theme_enlivenment_standard_1x',
-          'bannerbildbreakpoints_theme_enlivenment_wide_1x' => 'bannerbildbreakpoints_theme_enlivenment_wide_1x',
-        ),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => 1,
       ),
       'type' => 'media_generic',
       'weight' => 41,
+    ),
+  );
+
+  // Exported field_instance: 'node-blogpost-field_bannerimage'.
+  $field_instances['node-blogpost-field_bannerimage'] = array(
+    'bundle' => 'blogpost',
+    'default_value' => array(
+      0 => array(
+        'target_id' => 1488,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_bannerimage',
+    'label' => 'Bannerbild',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_bannerimage'.
+  $field_instances['node-page-field_bannerimage'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'bannerbild' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_bannerimage',
+    'label' => 'Bannerbild',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-standort-field_bannerimage'.
+  $field_instances['node-standort-field_bannerimage'] = array(
+    'bundle' => 'standort',
+    'default_value' => array(
+      0 => array(
+        'target_id' => 1489,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_bannerimage',
+    'label' => 'Bannerbild',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
     ),
   );
 

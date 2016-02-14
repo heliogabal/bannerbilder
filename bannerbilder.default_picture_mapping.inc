@@ -15,27 +15,27 @@ function bannerbilder_default_picture_mapping() {
   $picture_mapping->api_version = 2;
   $picture_mapping->label = 'Bannerbilder';
   $picture_mapping->machine_name = 'bannerbilder';
-  $picture_mapping->breakpoint_group = 'business_responsive_theme';
+  $picture_mapping->breakpoint_group = 'karus_theme';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.business_responsive_theme.wide' => array(
+    'breakpoints.theme.karus_theme.wide' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
         'image_style' => 'bannerbildbreakpoints_theme_enlivenment_wide_1x',
       ),
     ),
-    'breakpoints.theme.business_responsive_theme.standard' => array(
+    'breakpoints.theme.karus_theme.standard' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
         'image_style' => 'bannerbildbreakpoints_theme_enlivenment_standard_1x',
       ),
     ),
-    'breakpoints.theme.business_responsive_theme.narrow' => array(
+    'breakpoints.theme.karus_theme.narrow' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
         'image_style' => 'bannerbildbreakpoints_theme_enlivenment_narrow_1x',
       ),
     ),
-    'breakpoints.theme.business_responsive_theme.mobile' => array(
+    'breakpoints.theme.karus_theme.mobile' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
         'image_style' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1x',

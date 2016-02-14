@@ -55,6 +55,7 @@ function bannerbilder_views_default_views() {
   $handler->display->display_options['fields']['field_banner_1']['relationship'] = 'field_bannerimage_target_id';
   $handler->display->display_options['fields']['field_banner_1']['label'] = '';
   $handler->display->display_options['fields']['field_banner_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_banner_1']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_banner_1']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_banner_1']['type'] = 'picture';
   $handler->display->display_options['fields']['field_banner_1']['settings'] = array(
@@ -65,7 +66,7 @@ function bannerbilder_views_default_views() {
     'image_link' => '',
     'colorbox_settings' => array(
       'colorbox_group' => 'bannerbilder',
-      'colorbox_gallery' => 'post',
+      'colorbox_gallery' => 'none',
       'colorbox_gallery_custom' => '',
       'colorbox_caption' => 'auto',
       'colorbox_caption_custom' => '',

@@ -12,6 +12,23 @@ function bannerbilder_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|bannerbild|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'bannerbild';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'field_banner' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+        ),
+      ),
+    ),
+  );
+  $export['node|bannerbild|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|bannerbild|full';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'bannerbild';
@@ -26,6 +43,21 @@ function bannerbilder_ds_field_settings_info() {
     ),
   );
   $export['node|bannerbild|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|page|bannerbild';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'page';
+  $ds_fieldsetting->view_mode = 'bannerbild';
+  $ds_fieldsetting->settings = array(
+    'field_bannerimage' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|page|bannerbild'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -91,6 +123,24 @@ function bannerbilder_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|bannerbild|full'] = $ds_layout;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_view_modes_info().
+ */
+function bannerbilder_ds_view_modes_info() {
+  $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'bannerbild';
+  $ds_view_mode->label = 'Bannerbild';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['bannerbild'] = $ds_view_mode;
 
   return $export;
 }
