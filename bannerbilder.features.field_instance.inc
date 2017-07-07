@@ -99,7 +99,21 @@ function bannerbilder_field_default_field_instances() {
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
-      'image_field_caption' => 0,
+      'image_field_caption' => array(
+        'enabled' => 0,
+        'image_field_caption_wrapper' => array(
+          'image_field_caption_default' => array(
+            'format' => 'plain_text',
+            'value' => '',
+          ),
+        ),
+      ),
+      'image_field_caption_wrapper' => array(
+        'image_field_caption_default' => array(
+          'format' => 'plain_text',
+          'value' => '',
+        ),
+      ),
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '1000x242',
@@ -148,6 +162,12 @@ function bannerbilder_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'print' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -184,6 +204,7 @@ function bannerbilder_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
+          'use_content_language' => TRUE,
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',

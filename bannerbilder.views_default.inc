@@ -48,7 +48,7 @@ function bannerbilder_views_default_views() {
   $handler->display->display_options['relationships']['field_bannerimage_target_id']['field'] = 'field_bannerimage_target_id';
   $handler->display->display_options['relationships']['field_bannerimage_target_id']['label'] = 'Bannerbild';
   $handler->display->display_options['relationships']['field_bannerimage_target_id']['required'] = TRUE;
-  /* Field: Content: Bannerbild */
+  /* Field: Inhalt: Bannerbild */
   $handler->display->display_options['fields']['field_banner_1']['id'] = 'field_banner_1';
   $handler->display->display_options['fields']['field_banner_1']['table'] = 'field_data_field_banner';
   $handler->display->display_options['fields']['field_banner_1']['field'] = 'field_banner';
@@ -112,7 +112,7 @@ function bannerbilder_views_default_views() {
   $handler->display->display_options['empty']['entity']['entity_id'] = '1488';
   $handler->display->display_options['empty']['entity']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Bannerbild */
+  /* Field: Inhalt: Bannerbild */
   $handler->display->display_options['fields']['field_banner_1']['id'] = 'field_banner_1';
   $handler->display->display_options['fields']['field_banner_1']['table'] = 'field_data_field_banner';
   $handler->display->display_options['fields']['field_banner_1']['field'] = 'field_banner';

@@ -58,16 +58,7 @@ function bannerbilder_image_default_styles() {
   $styles['bannerbildbreakpoints_theme_enlivenment_mobile_1_5x'] = array(
     'label' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1_5x',
     'effects' => array(
-      7 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 840,
-          'height' => 198,
-          'keepproportions' => 1,
-          'style_name' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1_5x',
-        ),
-        'weight' => -10,
-      ),
+      7 => NULL,
       23 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
@@ -83,16 +74,7 @@ function bannerbilder_image_default_styles() {
   $styles['bannerbildbreakpoints_theme_enlivenment_mobile_1x'] = array(
     'label' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1x',
     'effects' => array(
-      11 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 560,
-          'height' => 222,
-          'keepproportions' => 1,
-          'style_name' => 'bannerbildbreakpoints_theme_enlivenment_mobile_1x',
-        ),
-        'weight' => -10,
-      ),
+      11 => NULL,
       21 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
@@ -108,16 +90,7 @@ function bannerbilder_image_default_styles() {
   $styles['bannerbildbreakpoints_theme_enlivenment_mobile_2x'] = array(
     'label' => 'bannerbildbreakpoints_theme_enlivenment_mobile_2x',
     'effects' => array(
-      9 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 560,
-          'height' => 132,
-          'keepproportions' => 1,
-          'style_name' => 'bannerbildbreakpoints_theme_enlivenment_mobile_2x',
-        ),
-        'weight' => -10,
-      ),
+      9 => NULL,
       22 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
@@ -133,16 +106,7 @@ function bannerbilder_image_default_styles() {
   $styles['bannerbildbreakpoints_theme_enlivenment_narrow_1x'] = array(
     'label' => 'bannerbildbreakpoints_theme_enlivenment_narrow_1x',
     'effects' => array(
-      13 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 560,
-          'height' => 132,
-          'keepproportions' => 1,
-          'style_name' => 'bannerbildbreakpoints_theme_enlivenment_narrow_1x',
-        ),
-        'weight' => -10,
-      ),
+      13 => NULL,
       20 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
@@ -158,16 +122,7 @@ function bannerbilder_image_default_styles() {
   $styles['bannerbildbreakpoints_theme_enlivenment_standard_1x'] = array(
     'label' => 'bannerbildbreakpoints_theme_enlivenment_standard_1x',
     'effects' => array(
-      15 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 560,
-          'height' => 132,
-          'keepproportions' => 1,
-          'style_name' => 'bannerbildbreakpoints_theme_enlivenment_standard_1x',
-        ),
-        'weight' => -10,
-      ),
+      15 => NULL,
       19 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
